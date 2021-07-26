@@ -1,3 +1,18 @@
-# ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について
+# TWS: 準備とjpaRmdの導入方法について
 
-dockerが使えない状況を想定した説明を書く。
+
+準備中：以下は昨年度のTWSの資料です。
+
+```{r echo=FALSE}
+library(zousan)
+embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1")
+```
+
+
+スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
+
+https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1
+
+<br>
+<br>
+スライドの埋め込みには，[zousanパッケージ](https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)を使用しています。

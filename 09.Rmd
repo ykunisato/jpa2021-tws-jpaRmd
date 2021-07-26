@@ -1,4 +1,12 @@
-# TWS: jpaRmdでらくらく文献処理！
+# TWS: jpaRmdの利用に関する発展的な話題
+
+修正対照表とwordでの提出について
+
+メモ
+
+knitrのpandoc関数を使う。
+
+pandoc("paper.tex","docx")
 
 準備中：以下は昨年度のTWSの資料です。
 

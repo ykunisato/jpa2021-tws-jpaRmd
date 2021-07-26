@@ -87,8 +87,6 @@ docker rmi IMAGE_ID
 
 ## Dockerが使えない場合
 
-以下のソフトとパッケージをインストールください。
+以下に進んでください。
 
-- R(https://www.r-project.org/)
-- Rstudio(https://rstudio.com/)
-- 私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモコードを実施した場合にインストールするか聞かれるので，その都度インストールください。
+https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html
