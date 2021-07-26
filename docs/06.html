@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩</title>
+  <meta name="description" content="6 ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
+  
+  
+  
+
+<meta name="author" content="国里愛彦(専修大学)・小杉 考司(専修大学)" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="05.html"/>
+<link rel="next" href="07.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> はじめに</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#連絡先"><i class="fa fa-check"></i><b>1.1</b> 連絡先</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#tws概要"><i class="fa fa-check"></i><b>1.2</b> TWS概要</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="02.html"><a href="02.html"><i class="fa fa-check"></i><b>2</b> 事前準備（Dockerとは）</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02.html"><a href="02.html#解析環境の違うと結果が再現しない"><i class="fa fa-check"></i><b>2.1</b> 解析環境の違うと結果が再現しない？</a></li>
+<li class="chapter" data-level="2.2" data-path="02.html"><a href="02.html#dockerでコードだけでなく解析環境の再現性も保つ"><i class="fa fa-check"></i><b>2.2</b> Dockerでコードだけでなく解析環境の再現性も保つ</a></li>
+<li class="chapter" data-level="2.3" data-path="02.html"><a href="02.html#rocker-rとrstudio用のdocker"><i class="fa fa-check"></i><b>2.3</b> Rocker: RとRstudio用のDocker</a></li>
+<li class="chapter" data-level="2.4" data-path="02.html"><a href="02.html#統計解析でdockerを導入する利点"><i class="fa fa-check"></i><b>2.4</b> 統計解析でDockerを導入する利点</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03.html"><a href="03.html"><i class="fa fa-check"></i><b>3</b> 事前準備(Windows編)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03.html"><a href="03.html#windows10のエディションを確認するproかhomeか"><i class="fa fa-check"></i><b>3.1</b> Windows10のエディションを確認する（ProかHomeか）</a></li>
+<li class="chapter" data-level="3.2" data-path="03.html"><a href="03.html#windows10がproエディションの場合の導入方法"><i class="fa fa-check"></i><b>3.2</b> Windows10がProエディションの場合の導入方法</a></li>
+<li class="chapter" data-level="3.3" data-path="03.html"><a href="03.html#windows10がhomeエディションの場合の導入方法"><i class="fa fa-check"></i><b>3.3</b> Windows10がHomeエディションの場合の導入方法</a></li>
+<li class="chapter" data-level="3.4" data-path="03.html"><a href="03.html#dockerコマンド"><i class="fa fa-check"></i><b>3.4</b> Dockerコマンド</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="03.html"><a href="03.html#コンテナの確認と開始"><i class="fa fa-check"></i><b>3.4.1</b> コンテナの確認と開始</a></li>
+<li class="chapter" data-level="3.4.2" data-path="03.html"><a href="03.html#コンテナの停止と削除イメージの削除"><i class="fa fa-check"></i><b>3.4.2</b> コンテナの停止と削除，イメージの削除</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="03.html"><a href="03.html#dockerが使えない場合"><i class="fa fa-check"></i><b>3.5</b> Dockerが使えない場合</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04.html"><a href="04.html"><i class="fa fa-check"></i><b>4</b> 事前準備(Mac編)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04.html"><a href="04.html#macへのdockerの導入方法"><i class="fa fa-check"></i><b>4.1</b> MacへのDockerの導入方法</a></li>
+<li class="chapter" data-level="4.2" data-path="04.html"><a href="04.html#dockerコマンド-1"><i class="fa fa-check"></i><b>4.2</b> Dockerコマンド</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04.html"><a href="04.html#コンテナの確認と開始-1"><i class="fa fa-check"></i><b>4.2.1</b> コンテナの確認と開始</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04.html"><a href="04.html#コンテナの停止と削除イメージの削除-1"><i class="fa fa-check"></i><b>4.2.2</b> コンテナの停止と削除，イメージの削除</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="04.html"><a href="04.html#dockerが使えない場合-1"><i class="fa fa-check"></i><b>4.3</b> Dockerが使えない場合</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05.html"><a href="05.html"><i class="fa fa-check"></i><b>5</b> 事前準備(その他)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05.html"><a href="05.html#文献管理ソフト"><i class="fa fa-check"></i><b>5.1</b> 文献管理ソフト</a></li>
+<li class="chapter" data-level="5.2" data-path="05.html"><a href="05.html#githubアカウント"><i class="fa fa-check"></i><b>5.2</b> Githubアカウント</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06.html"><a href="06.html"><i class="fa fa-check"></i><b>6</b> ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について</a></li>
+<li class="chapter" data-level="7" data-path="07.html"><a href="07.html"><i class="fa fa-check"></i><b>7</b> TWS: 準備とjpaRmdの導入方法について</a></li>
+<li class="chapter" data-level="8" data-path="08.html"><a href="08.html"><i class="fa fa-check"></i><b>8</b> TWS: jpaRmdで日本語論文を書いてみよう！</a></li>
+<li class="chapter" data-level="9" data-path="09.html"><a href="09.html"><i class="fa fa-check"></i><b>9</b> TWS: jpaRmdでらくらく文献処理！</a></li>
+<li class="chapter" data-level="10" data-path="10.html"><a href="10.html"><i class="fa fa-check"></i><b>10</b> TWS: jpaRmdの利用に関する発展的な話題</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ローカルでrとrstudioを使って日本語論文執筆をする場合の手順について" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> ローカルでRとRStudioを使って日本語論文執筆をする場合の手順について</h1>
+<p>dockerが使えない状況を想定した説明を書く。</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="05.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="07.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

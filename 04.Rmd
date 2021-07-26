@@ -1,0 +1,69 @@
+# 事前準備(Mac編)
+
+それでは，早速お手持ちのMacにDockerを導入しましょう（Windowsは前の[3 事前準備(Windows編)](03.html)をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。
+
+
+## MacへのDockerの導入方法
+
+Macユーザーの方は，以下の動画を参考にDockerを導入ください。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z2TUXFvn99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameの=以降は，好みによって変更ください）。
+
+```
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
+```
+
+普段使っているホームディレクトリがマウントされていると思います。
+
+
+## Dockerコマンド
+
+### コンテナの確認と開始
+
+コンテナの動作確認するには，ターミナルに以下を打ち込みます。STATUSがUpになっているとコンテナが動いています（再起動後に止まったりしていることがある）。
+
+```
+docker ps -a
+```
+
+もしコンテナが停止している場合は(STATUSがExitedになっている)，ターミナルに以下を打ち込んで，コンテナを開始します。
+
+```
+docker start コンテナ名(上記の場合はpaper)
+```
+
+### コンテナの停止と削除，イメージの削除
+
+もうコンテナが不要になったら，停止して削除します。コンテナの停止には，ターミナルに以下を打ち込みます。
+
+```
+docker stop コンテナ名(上記の場合はpaper)
+```
+
+コンテナの削除には，ターミナルに以下を打ち込みます。
+
+```
+docker rm コンテナ名(上記の場合はpaper)
+```
+
+rmしてもコンテナが削除されただけでダウンロードしたイメージは残っています。まず，以下をターミナルに打ち込んで，イメージの状況を確認します。削除したいイメージのIMAGE IDをコピーします。
+
+```
+docker images
+```
+
+上記でコピーしたIMAGE IDを使って，以下をターミナルに打ち込んで，イメージを削除します。
+
+```
+docker rmi IMAGE_ID
+```
+
+## Dockerが使えない場合
+
+以下のソフトとパッケージをインストールください。
+
+- R(https://www.r-project.org/)
+- Rstudio(https://rstudio.com/)
+- 私が用意したDockerイメージ内には大量のRパッケージがはいっているので，それと同じものを用意するのは難しいかと思います。とりあえず，デモコードを実施した場合にインストールするか聞かれるので，その都度インストールください。

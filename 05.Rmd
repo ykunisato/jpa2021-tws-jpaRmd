@@ -1,0 +1,13 @@
+# 事前準備(その他)
+
+## 文献管理ソフト
+
+BibTeX形式で文献情報が出力できればなんでも良いのですが，最近は，以下の２つが便利かと思います。Zoteroの場合は，RStudioとの連携も良いのです（zotero connection）。ただzotero connectionは，dockerではちょっと使いにくいのと，ユーザーが設定にかける手間が多いとトラブルの元になるので，今回は文献管理ソフトから出力されたbibtex形式ファイルを使うことにします。
+
+- [Paperpile](https://paperpile.com/)
+
+- [Zotero](https://www.zotero.org/)
+
+## Githubアカウント
+
+Rstudioを使った再現可能性を高める取り組みにおいては，Githubを使うと便利です。詳しくは，[RStudioでのGithub入門](https://kunisatolab.github.io/main/how-to-github.html)をご確認ください。

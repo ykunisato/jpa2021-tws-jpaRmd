@@ -1,0 +1,15 @@
+book_filename: "JPA2021-TWS-jpaRmd"
+output_dir: "docs"
+site: bookdown::bookdown_site
+delete_merged_file: true
+rmd_files:
+  - "index.Rmd"
+  - "02.Rmd"
+  - "03.Rmd"
+  - "04.Rmd"
+  - "05.Rmd"
+  - "06.Rmd"
+  - "07.Rmd"
+  - "08.Rmd"
+  - "09.Rmd"
+  - "10.Rmd"
