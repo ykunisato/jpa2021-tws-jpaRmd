@@ -10,7 +10,7 @@ embed_slide("https://kosugitti.github.io/slides/JPA2021_jpaRmdCitation/JPA_citat
 
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
-https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1
+https://kosugitti.github.io/slides/JPA2021_jpaRmdCitation/JPA_citation.html#1
 
 <br>
 <br>
