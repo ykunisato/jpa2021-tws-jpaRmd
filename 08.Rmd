@@ -1,10 +1,10 @@
 # TWS: jpaRmdでらくらく文献処理！
 
-準備中：以下は昨年度のTWSの資料です。
+準備中
 
 ```{r echo=FALSE}
 library(zousan)
-embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1")
+embed_slide("https://kosugitti.github.io/slides/JPA2021_jpaRmdCitation/JPA_citation.html#1")
 ```
 
 
