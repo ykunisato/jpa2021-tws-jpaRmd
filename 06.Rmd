@@ -1,17 +1,17 @@
-# TWS: 準備とjpaRmdの導入方法について
+# TWS: 再現可能な論文執筆と環境構築
 
 
 準備中：以下は昨年度のTWSの資料です。
 
 ```{r echo=FALSE}
 library(zousan)
-embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1")
+embed_slide("https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/06.html#1")
 ```
 
 
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
-https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1
+https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/06.html
 
 <br>
 <br>

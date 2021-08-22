@@ -1,6 +1,6 @@
 # TWS: jpaRmdでらくらく文献処理！
 
-準備中
+
 
 ```{r echo=FALSE}
 library(zousan)

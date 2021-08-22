@@ -1,24 +1,15 @@
 # TWS: jpaRmdの利用に関する発展的な話題
 
-修正対照表とwordでの提出について
-
-メモ
-
-knitrのpandoc関数を使う。
-
-pandoc("paper.tex","docx")
-
-準備中：以下は昨年度のTWSの資料です。
 
 ```{r echo=FALSE}
 library(zousan)
-embed_slide("https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1")
+embed_slide("https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/09.html#1")
 ```
 
 
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
-https://ykunisato.github.io/jpa2020-tws-kunisato/07.html#1
+https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/09.html
 
 <br>
 <br>

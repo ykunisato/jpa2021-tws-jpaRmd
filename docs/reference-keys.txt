@@ -24,7 +24,7 @@ dockerが使えない場合-1
 dockerが使えない場合-2
 文献管理ソフト
 githubアカウント
-tws-準備とjparmdの導入方法について
+tws-再現可能な論文執筆と環境構築
 tws-jparmdで日本語論文を書いてみよう
 tws-jparmdでらくらく文献処理
 tws-jparmdの利用に関する発展的な話題
