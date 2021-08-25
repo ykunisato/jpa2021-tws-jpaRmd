@@ -1,6 +1,6 @@
 # 事前準備(Windows編)
 
-それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の[「4 事前準備（Mac編）」](https://ykunisato.github.io/jpa2020-tws-002/04.html)をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。
+それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の[「4 事前準備（Mac編）」](https://ykunisato.github.io/jpa2021-tws-jpaRmd/04.html)をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。
 
 
 ## Windows10のエディションを確認する（ProかHomeか）
@@ -13,7 +13,7 @@
 
 ## Windows10がProエディションの場合の導入方法
 
-Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。
+Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。また，この動画は2020年10月に作成したものですが，この時はDocker Desktopのバージョンは2.4.0です。2021年8月の段階で最新のWindows updateを適用して，Docker Desktop 3.6.0をインストールして動作確認をしています。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aStsqv2DpF4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -23,13 +23,19 @@ Windows10 Proエディションの方は以下の動画を参考にDockerを導�
 docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r
 ```
 
+なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に":4.1.0"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
+
+```
+docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r:4.1.0
+```
+
 終わったら，ブラウザのアドレスバーに**localhost:8787**と打ち込んで，出てきたログイン画面のUsernameに**rstudio**, Passwordに**paper**(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。
 
 <br />
 
 ## Windows10がHomeエディションの場合の導入方法
 
-Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。
+Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。また，この動画は2020年10月に作成したものですが，この時はDocker Desktopのバージョンは2.4.0です。2021年8月の段階で最新のWindows updateを適用して，Docker Desktop 3.6.0をインストールして動作確認をしています。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wLEZcc4erlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -37,6 +43,12 @@ Windows10 Homeエディションの方は以下の動画を参考にDockerを導
 
 ```
 docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r
+```
+
+なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に":4.1.0"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
+
+```
+docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r:4.1.0
 ```
 
 終わったら，ブラウザのアドレスバーに**localhost:8787**と打ち込んで，出てきたログイン画面のUsernameに**rstudio**, Passwordに**paper**(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。
@@ -87,6 +99,9 @@ docker rmi IMAGE_ID
 
 ## Dockerが使えない場合
 
-以下に進んでください。
+これまでの経験上，WindowsでDockerがうまくインストールできない場合，(1)マイクロソフトのSurfaceを利用している（インストールできる場合とできない場合がありました），(2)古いパソコンで買った時から様々な設定が積み重なっているなどがありました（個人的にはパソコンは過剰に個人的な設定をせず，定期的にクリーンインストールして使用するのが良いかと思います...)
+
+
+Dockerが使えないor使いたくない場合は，以下に進んでください。
 
 https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html

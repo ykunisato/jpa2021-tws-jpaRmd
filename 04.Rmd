@@ -5,7 +5,7 @@
 
 ## MacへのDockerの導入方法
 
-Macユーザーの方は，以下の動画を参考にDockerを導入ください。
+Macユーザーの方は，以下の動画を参考にDockerを導入ください。なお，M1 Mac(Apple Silicon)に関しては，2021年8月の段階でもRockerが利用できません[^2]。つまり，Rockerをベースにした国里のPaper-rも動きません。M1 Mac(Apple Silicon)の利用者は，[こちら](https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html)で，DockerではなくRSutidoとRを直接的にインストールください。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z2TUXFvn99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -13,6 +13,12 @@ Macユーザーの方は，以下の動画を参考にDockerを導入くださ�
 
 ```
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
+```
+
+なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に":4.1.0"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
+
+```
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0
 ```
 
 普段使っているホームディレクトリがマウントされていると思います。
@@ -62,6 +68,9 @@ docker rmi IMAGE_ID
 
 ## Dockerが使えない場合
 
-以下に進んでください。
+Dockerが使えないor使いたくない場合は，以下に進んでください。
 
 https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html
+
+
+[^2]: Apple Silicon(M1 Mac)では，ARM64アーキテクチャーとなり，大きな変更がなされました。Apple側は従来のIntel x86_64のソフトが動くような工夫をしており，Dockerも現状では対応しています。しかし，2021年8月の段階では，ARM64でネイティブに動くRStudioがないのと（動作はしますが，ARM64用ではない），ARM64ベースのRパッケージの管理システムないので，現状ではまだちゃんと動くR用のDockerがありません（実は個人開発で動くものもあるのですが，一番シェアのあるRockerからのリリースを待つのが良いかと思います）。

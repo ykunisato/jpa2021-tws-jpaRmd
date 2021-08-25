@@ -10,7 +10,7 @@
 
 ## 文献管理ソフト
 
-BibTeX形式で文献情報が出力できればなんでも良いのですが，最近は，以下の２つが便利かと思います。Zoteroの場合は，RStudioとの連携も良いのです（zotero connection）。ただzotero connectionは，dockerではちょっと使いにくいのと，ユーザーが設定にかける手間が多いとトラブルの元になるので，今回は文献管理ソフトから出力されたbibtex形式ファイルを使うことにします。
+BibTeX形式で文献情報が出力できればなんでも良いのですが，最近は，以下の２つが便利かと思います。Zoteroの場合は，RStudioとの連携も良いのです（zotero connection）。今回は文献管理ソフトから出力されたbibtex形式ファイルを使うことを想定しています。
 
 - [Paperpile](https://paperpile.com/)
 

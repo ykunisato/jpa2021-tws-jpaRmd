@@ -32,7 +32,7 @@
   
 <link rel="prev" href="02.html"/>
 <link rel="next" href="04.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -138,7 +138,7 @@
             <section class="normal" id="section-">
 <div id="事前準備windows編" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> 事前準備(Windows編)</h1>
-<p>それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の<a href="https://ykunisato.github.io/jpa2020-tws-002/04.html">「4 事前準備（Mac編）」</a>をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。</p>
+<p>それでは，早速お手持ちのWindowsパソコンにDockerを導入しましょう（Macは次の<a href="https://ykunisato.github.io/jpa2021-tws-jpaRmd/04.html">「4 事前準備（Mac編）」</a>をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。</p>
 <div id="windows10のエディションを確認するproかhomeか" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Windows10のエディションを確認する（ProかHomeか）</h2>
 <p>多くの方が，Windows10をお使いだとは思いますが，一般的に使われるWindowsにはProとHomeの２つのエディションがあります。エディションによってDockerの導入方法が異なります。以下の解説動画で，ご自身のパソコンのWindowsがProかHomeのどちらかをご確認ください。</p>
@@ -148,21 +148,25 @@
 </div>
 <div id="windows10がproエディションの場合の導入方法" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Windows10がProエディションの場合の導入方法</h2>
-<p>Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。</p>
+<p>Windows10 Proエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。また，この動画は2020年10月に作成したものですが，この時はDocker Desktopのバージョンは2.4.0です。2021年8月の段階で最新のWindows updateを適用して，Docker Desktop 3.6.0をインストールして動作確認をしています。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aStsqv2DpF4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画内で口頭で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
+<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に“:4.1.0”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
+<pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0</code></pre>
 <p>終わったら，ブラウザのアドレスバーに<strong>localhost:8787</strong>と打ち込んで，出てきたログイン画面のUsernameに<strong>rstudio</strong>, Passwordに<strong>paper</strong>(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。</p>
 <p><br /></p>
 </div>
 <div id="windows10がhomeエディションの場合の導入方法" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Windows10がHomeエディションの場合の導入方法</h2>
-<p>Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。</p>
+<p>Windows10 Homeエディションの方は以下の動画を参考にDockerを導入なさってください。なお，コマンドプロンプトに打ち込むコードについて，動画内で紹介しているものでも動きますが，以下で書いているコードのほうが楽だし上手くいくと思います。また，この動画は2020年10月に作成したものですが，この時はDocker Desktopのバージョンは2.4.0です。2021年8月の段階で最新のWindows updateを適用して，Docker Desktop 3.6.0をインストールして動作確認をしています。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wLEZcc4erlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画内で口頭で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
+<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に“:4.1.0”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
+<pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0</code></pre>
 <p>終わったら，ブラウザのアドレスバーに<strong>localhost:8787</strong>と打ち込んで，出てきたログイン画面のUsernameに<strong>rstudio</strong>, Passwordに<strong>paper</strong>(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。</p>
 <p><br /></p>
 </div>
@@ -189,7 +193,8 @@
 </div>
 <div id="dockerが使えない場合" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> Dockerが使えない場合</h2>
-<p>以下に進んでください。</p>
+<p>これまでの経験上，WindowsでDockerがうまくインストールできない場合，(1)マイクロソフトのSurfaceを利用している（インストールできる場合とできない場合がありました），(2)古いパソコンで買った時から様々な設定が積み重なっているなどがありました（個人的にはパソコンは過剰に個人的な設定をせず，定期的にクリーンインストールして使用するのが良いかと思います…)</p>
+<p>Dockerが使えないor使いたくない場合は，以下に進んでください。</p>
 <p><a href="https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html" class="uri">https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html</a></p>
 
 </div>

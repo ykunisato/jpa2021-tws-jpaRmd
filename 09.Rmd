@@ -1,11 +1,7 @@
 # TWS: jpaRmdの利用に関する発展的な話題
 
 
-```{r echo=FALSE}
-library(zousan)
-embed_slide("https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/09.html#1")
-```
-
+<iframe src="https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/09.html#1" width="672" height="400px"></iframe>
 
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 

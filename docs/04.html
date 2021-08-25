@@ -32,7 +32,7 @@
   
 <link rel="prev" href="03.html"/>
 <link rel="next" href="05.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -141,11 +141,13 @@
 <p>それでは，早速お手持ちのMacにDockerを導入しましょう（Windowsは前の<a href="03.html">3 事前準備(Windows編)</a>をご覧ください）。なお，　Dockerを使うにあたって，15GBくらいハードディスクに余裕があると良いかと思います。</p>
 <div id="macへのdockerの導入方法" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> MacへのDockerの導入方法</h2>
-<p>Macユーザーの方は，以下の動画を参考にDockerを導入ください。</p>
+<p>Macユーザーの方は，以下の動画を参考にDockerを導入ください。なお，M1 Mac(Apple Silicon)に関しては，2021年8月の段階でもRockerが利用できません<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。つまり，Rockerをベースにした国里のPaper-rも動きません。M1 Mac(Apple Silicon)の利用者は，<a href="https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html">こちら</a>で，DockerではなくRSutidoとRを直接的にインストールください。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z2TUXFvn99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p>ターミナルには以下のコマンドを入力します（適宜，PASSWORDやnameの=以降は，好みによって変更ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
+<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に“:4.1.0”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
+<pre><code>docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0</code></pre>
 <p>普段使っているホームディレクトリがマウントされていると思います。</p>
 </div>
 <div id="dockerコマンド-1" class="section level2" number="4.2">
@@ -171,10 +173,16 @@
 </div>
 <div id="dockerが使えない場合-1" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Dockerが使えない場合</h2>
-<p>以下に進んでください。</p>
+<p>Dockerが使えないor使いたくない場合は，以下に進んでください。</p>
 <p><a href="https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html" class="uri">https://ykunisato.github.io/jpa2021-tws-jpaRmd/05.html</a></p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Apple Silicon(M1 Mac)では，ARM64アーキテクチャーとなり，大きな変更がなされました。Apple側は従来のIntel x86_64のソフトが動くような工夫をしており，Dockerも現状では対応しています。しかし，2021年8月の段階では，ARM64でネイティブに動くRStudioがないのと（動作はしますが，ARM64用ではない），ARM64ベースのRパッケージの管理システムないので，現状ではまだちゃんと動くR用のDockerがありません（実は個人開発で動くものもあるのですが，一番シェアのあるRockerからのリリースを待つのが良いかと思います）。<a href="04.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
