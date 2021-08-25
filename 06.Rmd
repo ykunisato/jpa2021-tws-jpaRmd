@@ -7,6 +7,3 @@
 
 https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/06.html
 
-<br>
-<br>
-スライドの埋め込みには，[zousanパッケージ](https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)を使用しています。

@@ -7,7 +7,3 @@
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
 https://ykunisato.github.io/jpa2020-tws-kunisato/07.html
-
-<br>
-<br>
-スライドの埋め込みには，[zousanパッケージ](https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)を使用しています。

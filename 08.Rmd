@@ -7,7 +7,3 @@
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
 https://kosugitti.github.io/slides/JPA2021_jpaRmdCitation/JPA_citation.html#1
-
-<br>
-<br>
-スライドの埋め込みには，[zousanパッケージ](https://kazutan.github.io/blog/2017/03/embed-slide-into-rmd/)を使用しています。
