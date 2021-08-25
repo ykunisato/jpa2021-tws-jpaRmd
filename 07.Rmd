@@ -6,4 +6,4 @@
 
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
-https://ykunisato.github.io/jpa2020-tws-kunisato/07.html
+https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/07.html
