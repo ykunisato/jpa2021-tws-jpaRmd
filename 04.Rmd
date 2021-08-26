@@ -15,10 +15,10 @@ Macユーザーの方は，以下の動画を参考にDockerを導入くださ�
 docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r
 ```
 
-なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に":4.1.0"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
+なお，Dockerではタグによる指定もできます，例えば，R4.1.1を指定したい場合は，以下のように最後に":4.1.1"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
 
 ```
-docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0
+docker run -e PASSWORD=paper -e DISABLE_AUTH=true -p 8787:8787 -v $PWD:/home/rstudio -d --name paper ykunisato/paper-r:4.1.1
 ```
 
 普段使っているホームディレクトリがマウントされていると思います。

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 事前準備（Dockerとは） | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩</title>
-  <meta name="description" content="2 事前準備（Dockerとは） | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
+  <title>Page not found | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩</title>
+  <meta name="description" content="Page not found | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 事前準備（Dockerとは） | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
+  <meta property="og:title" content="Page not found | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 事前準備（Dockerとは） | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
+  <meta name="twitter:title" content="Page not found | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="03.html"/>
+
+
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,49 +136,19 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="事前準備dockerとは" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> 事前準備（Dockerとは）</h1>
-<div id="解析環境の違うと結果が再現しない" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> 解析環境の違うと結果が再現しない？</h2>
-<p>コンピュータが計算するものは正しそうに見えますが，Rを含む統計ソフトが返す結果がいつでも一致するとは限りません。例えば，コンピュータのOSの種類，統計解析ソフトのバージョン，Rの場合はパッケージのバージョンによって出力される結果は異なることがあります。最近は，データや解析コードの公開が進んできています。しかし，このような統計解析を実行する環境の違いが，再現性を低めている可能性もあります。</p>
-</div>
-<div id="dockerでコードだけでなく解析環境の再現性も保つ" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Dockerでコードだけでなく解析環境の再現性も保つ</h2>
-<p>解析環境の再現性のために，データやコードを公開・共有するだけでなく，解析環境やバージョン情報も公開する必要があります。ただ，なかなか公開するだけだと，論文作成時と同じ解析環境を作るのは難しかったりします。例えば，古いOSで動作するソフトじゃないと解析が再現できない場合，そのOSやソフトを用意するのは難しいかもしれません（実際，研究でつかわれたプログラムが公開されていたが，現在使われているOSでは動作せず，かといって古いOSを用意することも不可能なことがありました）。</p>
-<p>OSとソフト（Rの場合はパッケージも）をまとめて配布できると解析環境の再現性が担保できるかもしれません。WindowsやMacの場合は難しいですが，Linux上で動作するようなソフトの場合は，OSとソフトを含んだものをまとめて（まとめたものをコンテナといいます），配布することもできます。このような，OSに依存せずに，Linuxベースのアプリケーションをコンテナ化する技術をDockerと呼びます。以下の図のように，Dockerを使うとOSとソフトをまとめたコンテナをイメージとして配布可能になります。配布が可能ということは，統計解析環境の共有も可能になります。そして，Docker Hub(<a href="https://hub.docker.com/" class="uri">https://hub.docker.com/</a> )では，多数のイメージが公開されています。ご自身の関心に合わせて，便利なDockerイメージをご利用いただけます。</p>
-<p><img src="fig/docker.png" width="500"></p>
-</div>
-<div id="rocker-rとrstudio用のdocker" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Rocker: RとRstudio用のDocker</h2>
-<p>今回の場合は，OS(Ubuntsと呼ばれるLinux)とソフト（RとIDEのRStudio）とRパッケージをまとめたコンテナを使います。自作もできますが，結構大変ですので，既に公開されているものを使います。RやRstudio用のDockerコンテナをつくるRockerプロジェクト(<a href="https://hub.docker.com/u/rocker" class="uri">https://hub.docker.com/u/rocker</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>が公開したイメージが便利なので，今回のTWSでも使用します。</p>
-<p>Rockerプロジェクトでも十分なのですが，よく使うパッケージなどは事前に入れられていると便利です。特にベイズ統計で用いるRstanなどはインストールがちょっと面倒なので，事前にそれらが入っていると便利かと思います（特にMarkdownでのPDF出力まわりやRStanなどが事前に入っていると便利です）。そこで，私は心理学で使いそうなRでパッケージを，RockerプロジェクトのVerseというコンテナにたくさん追加した自作Dockerイメージ(ykunisato/paper-r)を作って公開しています(<a href="https://hub.docker.com/u/ykunisato" class="uri">https://hub.docker.com/u/ykunisato</a>)。今回のTWSでは，私が作成したpaper-rというDockerイメージを使います。</p>
-</div>
-<div id="統計解析でdockerを導入する利点" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> 統計解析でDockerを導入する利点</h2>
-<p>最後に，Dockerを導入する利点を以下に挙げておきます。</p>
-<ul>
-<li>統計解析環境を再現可能にできる（使ったDockerイメージを配布すればいいだけ）</li>
-<li>最初にDockerさえインストールできれば，あとはコマンド１つで，簡単に面倒なソフトのインストールなどが終わる</li>
-<li>プラウザで作業ができるので，今どきの仕事スタイルにあっている</li>
-<li>かっこいい</li>
-<li>(マニア向け)もしサーバー上にDockerを導入すれば，簡単に自分のサーバーでサービスを稼働できる（iPadからブラウザを通してRstudioが使える！）。</li>
-</ul>
-
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Nüst, D., Eddelbuettel, D., Bennett, D., Cannoodt, R., Clark, D., Daróczi, G., Edmondson, M., Fay, C., Hughes, E., Kjeldgaard, L., Lopp, S., Marwick, B., Nolis, H., Nolis, J., Ooi, H., Ram, K., Ross, N., Shepherd, L., Sólymos, P., … Xiao, N. (2020). The Rockerverse: Packages and Applications for Containerisation with R. The R Journal, 12(1), 437.<a href="02.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="03.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

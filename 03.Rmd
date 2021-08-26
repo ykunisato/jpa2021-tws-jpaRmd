@@ -23,10 +23,10 @@ Windows10 Proエディションの方は以下の動画を参考にDockerを導�
 docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r
 ```
 
-なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に":4.1.0"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
+なお，Dockerではタグによる指定もできます，例えば，R4.1.1を指定したい場合は，以下のように最後に":4.1.1"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
 
 ```
-docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r:4.1.0
+docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r:4.1.1
 ```
 
 終わったら，ブラウザのアドレスバーに**localhost:8787**と打ち込んで，出てきたログイン画面のUsernameに**rstudio**, Passwordに**paper**(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。
@@ -45,10 +45,10 @@ Windows10 Homeエディションの方は以下の動画を参考にDockerを導
 docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r
 ```
 
-なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に":4.1.0"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
+なお，Dockerではタグによる指定もできます，例えば，R4.1.1を指定したい場合は，以下のように最後に":4.1.1"を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。
 
 ```
-docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r:4.1.0
+docker run -e PASSWORD=paper -p 8787:8787 -v "%cd%":/home/rstudio -d --name paper ykunisato/paper-r:4.1.1
 ```
 
 終わったら，ブラウザのアドレスバーに**localhost:8787**と打ち込んで，出てきたログイン画面のUsernameに**rstudio**, Passwordに**paper**(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。

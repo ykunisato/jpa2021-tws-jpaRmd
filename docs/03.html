@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 事前準備(Windows編) | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩</title>
   <meta name="description" content="3 事前準備(Windows編) | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 事前準備(Windows編) | 再現可能な日本語論文執筆入門:jpaRmdで実現する再現可能で低コストな日本語論文執筆のはじめの一歩" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
 <link rel="prev" href="02.html"/>
 <link rel="next" href="04.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -153,8 +153,8 @@
 </iframe>
 <p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画内で口頭で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
-<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に“:4.1.0”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
-<pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0</code></pre>
+<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.1を指定したい場合は，以下のように最後に“:4.1.1”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
+<pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r:4.1.1</code></pre>
 <p>終わったら，ブラウザのアドレスバーに<strong>localhost:8787</strong>と打ち込んで，出てきたログイン画面のUsernameに<strong>rstudio</strong>, Passwordに<strong>paper</strong>(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。</p>
 <p><br /></p>
 </div>
@@ -165,8 +165,8 @@
 </iframe>
 <p>コマンドプロンプトに打ち込むDocker用のコードは以下になります。<strong>以下のコードは動画内で口頭で解説しているものとは異なりますが，こちらのほうが簡単かつ上手くいくと思います！（-e DISABLE_AUTH=trueは便利ですが，複数アカウントがある場合は挙動がつかめないのでおすすめしないです））</strong>ローカルで，ご自身が所有しているパソコンでの利用を想定しているのでパスワードはpaperに固定しています（気になる場合は改変ください）。</p>
 <pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r</code></pre>
-<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.0を指定したい場合は，以下のように最後に“:4.1.0”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
-<pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r:4.1.0</code></pre>
+<p>なお，Dockerではタグによる指定もできます，例えば，R4.1.1を指定したい場合は，以下のように最後に“:4.1.1”を追加すると指定できます（詳しくはpaper-rのページのTagを確認ください）。</p>
+<pre><code>docker run -e PASSWORD=paper -p 8787:8787 -v &quot;%cd%&quot;:/home/rstudio -d --name paper ykunisato/paper-r:4.1.1</code></pre>
 <p>終わったら，ブラウザのアドレスバーに<strong>localhost:8787</strong>と打ち込んで，出てきたログイン画面のUsernameに<strong>rstudio</strong>, Passwordに<strong>paper</strong>(もしくはご自身で設定したパスワード)をいれてください。普段使っているホームディレクトリがマウントされていると思います。</p>
 <p><br /></p>
 </div>
@@ -249,6 +249,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
