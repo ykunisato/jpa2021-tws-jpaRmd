@@ -1,6 +1,5 @@
 # TWS: jpaRmdで日本語論文を書いてみよう！
 
-<!--
 
 
 <iframe src="https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/07.html#1" width="672" height="400px"></iframe>
@@ -9,5 +8,3 @@
 スライドは以下のリンクをクリックいただくブラウザの全画面で見ることができます。
 
 https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/07.html
-
--->

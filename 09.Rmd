@@ -1,7 +1,6 @@
 # TWS: jpaRmdの利用に関する発展的な話題
 
 
-<!--
 
 
 <iframe src="https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/09.html#1" width="672" height="400px"></iframe>
@@ -11,4 +10,3 @@
 https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/09.html
 
 
--->

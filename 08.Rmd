@@ -1,6 +1,6 @@
 # TWS: jpaRmdでらくらく文献処理！
 
-<!--
+
 
 
 <iframe src="https://kosugitti.github.io/slides/JPA2021_jpaRmdCitation/JPA_citation.html#1" width="672" height="400px"></iframe>
@@ -10,4 +10,3 @@
 
 https://kosugitti.github.io/slides/JPA2021_jpaRmdCitation/JPA_citation.html#1
 
--->

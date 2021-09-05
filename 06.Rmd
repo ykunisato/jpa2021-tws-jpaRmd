@@ -1,6 +1,5 @@
 # TWS: 再現可能な論文執筆と環境構築
 
-<!--
 
 
 <iframe src="https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/06.html#1" width="672" height="400px"></iframe>
@@ -10,4 +9,3 @@
 https://ykunisato.github.io/ccp-lab-slide/jpa-tws-jpaRmd/06.html
 
 
--->
