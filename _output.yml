@@ -1,6 +1,8 @@
 bookdown::epub_book: default
 bookdown::gitbook:
   css: style.css
+  include:
+    in_header: icon.html
   split_by: "rmd"
   config:
     toc:
@@ -10,3 +12,6 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 bookdown::pdf_book:
   keep_tex: yes
+  
+
+
